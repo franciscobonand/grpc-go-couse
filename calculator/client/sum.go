@@ -17,7 +17,7 @@ func doSum(ctx context.Context, c pb.CalculatorServiceClient) {
 
 	resp, err := c.Sum(ctx, in)
 	if err != nil {
-		log.Fatalf("Failed to greet server: %v\n", err)
+		log.Fatalf("Failed to sum: %v\n", err)
 	}
 
 	log.Printf("Sum result: %d\n", resp.Result)
