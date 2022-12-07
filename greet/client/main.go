@@ -26,4 +26,5 @@ func main() {
 	c := pb.NewGreetServiceClient(conn)
 
 	doGreet(ctx, c)
+	doGreetMany(ctx, c)
 }
