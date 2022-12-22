@@ -17,6 +17,9 @@ func (s *Server) Average(stream pb.CalculatorService_AverageServer) error {
 			avg := getAvg(nums)
 			return stream.SendAndClose(&pb.AvgResponse{Result: avg})
 		}
+		if err != nil {
+			log.Fatalf("Error reading client stream: %v\n", err)
+		}
 		nums = append(nums, req.Num)
 	}
 }
