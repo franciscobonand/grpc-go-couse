@@ -15,7 +15,7 @@ func doLongGreet(ctx context.Context, c pb.GreetServiceClient) {
 
 	stream, err := c.LongGreet(ctx)
 	if err != nil {
-		log.Fatalf("Failed calling Long Greet: %v\n", err)
+		log.Fatalf("Failed creating stream Long Greet: %v\n", err)
 	}
 
 	for _, name := range names {
