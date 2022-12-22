@@ -27,4 +27,5 @@ func main() {
 
 	doGreet(ctx, c)
 	doGreetMany(ctx, c)
+	doLongGreet(ctx, c)
 }
