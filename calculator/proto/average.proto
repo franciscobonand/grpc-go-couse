@@ -9,5 +9,5 @@ message AvgRequest {
 }
 
 message AvgResponse {
-    int32 result = 1;
+    float result = 1;
 }

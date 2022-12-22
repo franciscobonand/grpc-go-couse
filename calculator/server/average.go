@@ -21,11 +21,11 @@ func (s *Server) Average(stream pb.CalculatorService_AverageServer) error {
 	}
 }
 
-func getAvg(nums []int32) int32 {
+func getAvg(nums []int32) float32 {
 	var sum int32
-	length := int32(len(nums))
+	length := float32(len(nums))
 	for _, num := range nums {
 		sum += num
 	}
-	return sum / length
+	return float32(sum) / length
 }
