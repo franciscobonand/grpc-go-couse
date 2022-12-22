@@ -7,7 +7,7 @@ import (
 )
 
 func (s *Server) Primes(in *pb.PrimeRequest, stream pb.CalculatorService_PrimesServer) error {
-	log.Printf("Priems function invoked with %v\n", in)
+	log.Printf("Primes function invoked with %v\n", in)
 
 	primes := getDecomposed(in.Num)
 
