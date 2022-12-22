@@ -27,5 +27,6 @@ func main() {
 
 	// doSum(ctx, c)
 	// doPrimes(ctx, c)
-	doAvg(ctx, c)
+	// doAvg(ctx, c)
+	doMax(ctx, c)
 }
