@@ -16,7 +16,7 @@ const (
 
 func main() {
 	ctx := context.Background()
-	tls := true
+	tls := false
 	opts := []grpc.DialOption{}
 
 	if tls {

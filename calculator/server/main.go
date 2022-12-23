@@ -6,6 +6,7 @@ import (
 
 	pb "github.com/franciscobonand/grpc-go-course/calculator/proto"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/reflection"
 )
 
 const (
@@ -25,6 +26,7 @@ func main() {
 	log.Printf("Listening on %s\n", addr)
 	srv := grpc.NewServer()
 	pb.RegisterCalculatorServiceServer(srv, &Server{})
+	reflection.Register(srv)
 
 	if err = srv.Serve(lis); err != nil {
 		log.Fatalf("Server error: %v\n", err)

@@ -89,3 +89,7 @@ rpc GreetEveryone(stream GreetRequest) returns (stream GreetResponse) {};
 |Streaming      |Unary              |
 |Bi directional |Client -> Server   |
 |Free API design|GET/POST/UPDATE/...|
+
+## Evans - gRPC client CLI for debugging
+
+[Reference](https://github.com/ktr0731/evans)

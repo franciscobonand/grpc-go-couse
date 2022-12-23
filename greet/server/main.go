@@ -26,7 +26,7 @@ func main() {
 	log.Printf("Listening on %s\n", addr)
 
 	opts := []grpc.ServerOption{}
-	tls := true
+	tls := false
 	if tls {
 		certFile := "ssl/server.crt"
 		keyFile := "ssl/server.pem"
