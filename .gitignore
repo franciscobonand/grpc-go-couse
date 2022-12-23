@@ -6,6 +6,10 @@
 *.dll
 *.so
 *.dylib
+*.crt
+*.key
+*.pem
+*.csr
 
 # Test binary, built with `go test -c`
 *.test
