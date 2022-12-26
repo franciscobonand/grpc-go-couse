@@ -21,10 +21,20 @@ func documentToBlog(data *BlogItem) *pb.Blog {
 	}
 }
 
-func blogToDocument(data *pb.Blog) *BlogItem {
-	return &BlogItem{
+func blogToDocument(data *pb.Blog) (*BlogItem, error) {
+	bi := &BlogItem{
 		AuthorID: data.AuthorId,
 		Title:    data.Title,
 		Content:  data.Content,
 	}
+
+	if data.Id != "" {
+		oid, err := primitive.ObjectIDFromHex(data.Id)
+		if err != nil {
+			return nil, err
+		}
+		bi.ID = oid
+	}
+
+	return bi, nil
 }

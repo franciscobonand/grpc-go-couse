@@ -28,4 +28,10 @@ func main() {
 
 	bID := createBlog(ctx, c)
 	fmt.Printf("Blog with ID '%s' was created\n", bID)
+	readBlog(ctx, c, bID)
+	// readBlog(ctx, c, "invalidID")
+	updateBlog(ctx, c, bID)
+	listBlog(ctx, c)
+	deleteBlog(ctx, c, bID)
+	listBlog(ctx, c)
 }

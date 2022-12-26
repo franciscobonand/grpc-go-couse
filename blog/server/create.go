@@ -14,7 +14,7 @@ import (
 func (s *Server) CreateBlog(ctx context.Context, in *pb.Blog) (*pb.BlogId, error) {
 	log.Printf("Create Blog invoked with: %v\n", in)
 
-	data := blogToDocument(in)
+	data, _ := blogToDocument(in) // Structure doesn't contain an ID, so no error can occur
 
 	resp, err := s.coll.InsertOne(ctx, data)
 	if err != nil {
